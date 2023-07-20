@@ -1,17 +1,12 @@
-# Hospital_management_app
+# Health Connect
 This is a backend application for hospital management system made with the help of FastAPI, SQLite3 and OAuth 2.0
 
 
 ## OVERVIEW:
-Go to https://hospital-management-app.onrender.com for backend overview.Wait for 10 seconds give it time to load.
-Keep in mind that this is just backend part of the application .
-Thus, you will need to run it on OpenAPI or Postman.
+**HealthConnect** is an advanced hospital backend application that streamlines medical operations and patient care. It features three APIs for Patients, Doctors, and Authentication, ensuring secure data access. _OAuth 2.0_ with JWT tokens enhances user authentication and authorization. The _sqlite3_ backend ensures scalable data storage. _FastAPI-Mail_ automates appointment confirmations via email._ Razorpay _integration enables smooth online payments. The project prioritizes data security through encryption and regular audits. 
 
 ## Working of the Application:
-This is a backend of hospital management system. This project works like the real world hospital management system where once the patient is admited,their details 
-are filled by the admin.Once a doctor is assigned to the patient we can also see patient details along wiht the doctor assigned.Patients and Doctors have a many to mant relationship which helps us assign different patients to a single doctor and vice versa.\
-\
-Sidenote- Admin authentication is done by OAuth 2.0 .
+This project works like the real world hospital management system where once the patient comes in to book an appointment.Once he/she enters there information they recieve an automated confirmation via Email.Alongwith this, they can do hasle free payment via RazorPay as the project has payment integration.Once a doctor is assigned to the patient we can also see patient details along with the doctor assigned.Patients and Doctors have a many to mant relationship which helps us assign different patients to a single doctor and vice versa.\
 
 
 ## Installation 
@@ -24,11 +19,7 @@ Sidenote- Admin authentication is done by OAuth 2.0 .
 ##### 3. Run the following command on terminal
          uvicorn main:app --reload
 
-
-Now, as mentioned above there are two ways to run the application:
-1. By uvicorn server that will be live on http://127.0.0.1:8000 or the mentioned url in terminal after you run 3rd command in terminal.
-2. By online hosting i.e done by render here at https://hospital-management-app.onrender.com.
-
+//Note- The project has used its razor pay keys.Make sure while running it we replace it with personal razor pay keys.
 
 
 ## API Endpints:
@@ -39,18 +30,22 @@ Now, as mentioned above there are two ways to run the application:
 ##### ii.) Login (POST operation)
             /admin/token
 ######   NOTE- This request will return a token for authentication of the user.
-######         Always use these commands after the specified url.
+##### ii.) Delete admin (DELETE operation)
+            /admin/delete-admin
+            
+
+###### Always use these commands after the specified url.
 
 #### 2. DOCTORS
         
 #####   i.)  Show all doctors in the hospital (GET operation)
             /doctors/        
 #####   iii.) Add new doctor  (POST operation)            
-            /posts/                     
+            /doctors/                     
 #####   iv.)  Edit a doctor's details(PUT operation)            
-            /posts   
+            /doctors   
 #####   v.)   Delete a doctor from database (DELETE operation)            
-            /posts
+            /doctors
             
 #### 3. PATIENTS
         
@@ -66,6 +61,10 @@ Now, as mentioned above there are two ways to run the application:
             /patients/
 #####   vi.) Assign doctor to a patient
             /patients/doc
+#####   vii.)Create payment_ticket(POST operation)
+            /patients/create_order
+#####   vii.)Verify the payment (GET operation)
+            /patients/verify_order/{input}
             
 Note- Keep in mind to perform any restricted task you need admin login.
             
