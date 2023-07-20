@@ -1,5 +1,5 @@
 # Health Connect
-This is a backend application for hospital management system made with the help of FastAPI, SQLite3 and OAuth 2.0
+This is a hospital backend application made with the help of FastAPI, SQLite3 and OAuth 2.0.It also has payment integration via RazorPay and email automation.
 
 
 ## OVERVIEW:
