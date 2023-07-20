@@ -11,7 +11,7 @@ This project works like the real world hospital management system where once the
 
 ## Installation 
 ##### 1.Clone the above repo
-        git clone https://github.com/divyansh3690/Hospital_management_app.git
+       https://github.com/divyansh3690/Hospital_project.git
         
 ##### 2. Install the requirements
          pip install -r req.txt
