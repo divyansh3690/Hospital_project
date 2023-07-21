@@ -294,7 +294,7 @@ async def verify_order(input: str,db:Session=Depends(get_db)):
             patient = db.query(model.Patients).filter(input == model.Patients.order_id).first()
             patient.payment_status=1
             db.commit()
-            return JSONResponse(status_code=200, content={'message': 'Payment successfull'})
+            return JSONResponse(status_code=200, content={'message': 'Payment successful'})
         else:
             # Payment failed, handle the failure here
             return JSONResponse(status_code=500, content={'message': 'Payment failed'})
