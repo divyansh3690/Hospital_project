@@ -6,7 +6,7 @@ This is a hospital backend application made with the help of FastAPI, SQLite3 an
 **HealthConnect** is an advanced hospital backend application that streamlines medical operations and patient care. It features three APIs for Patients, Doctors, and Authentication, ensuring secure data access. _OAuth 2.0_ with JWT tokens enhances user authentication and authorization. The _sqlite3_ backend ensures scalable data storage. _FastAPI-Mail_ automates appointment confirmations via email. _Razorpay_ integration enables smooth online payments. The project prioritizes data security through encryption and regular audits. 
 
 ## Working of the Application:
-This project works like the real world hospital management system where once the patient comes in to book an appointment.Once he/she enters there information they recieve an automated confirmation via Email.Alongwith this, they can do hasle free payment via RazorPay as the project has payment integration.Once a doctor is assigned to the patient we can also see patient details along with the doctor assigned.Patients and Doctors have a many to mant relationship which helps us assign different patients to a single doctor and vice versa.\
+This project works like the real world hospital management system where the patient comes in to book an appointment.Once he/she enters there information they recieve an automated confirmation via Email.Along with this, they can do hasle free payment via RazorPay as the project has payment integration.Once a doctor is assigned to the patient we can also see patient details along with the doctor assigned.Patients and Doctors have a many to mant relationship which helps us assign different patients to a single doctor and vice versa.\
 
 
 ## Installation 
