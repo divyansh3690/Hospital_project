@@ -38,7 +38,6 @@ app.include_router(auth.router)
 app.include_router(doctors.router)
 app.include_router(patients.router)
 
-app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
 templates = Jinja2Templates(directory="templates")
