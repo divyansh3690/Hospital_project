@@ -24,8 +24,8 @@ from dotenv import dotenv_values
 # credentials
 
 
-RAZORPAY_KEY_ID = "rzp_test_4hU5VZrYmhTnH5"
-RAZORPAY_KEY_SECRET = "1QJfKp13xvW1ZnRQICNZvGyR"
+RAZORPAY_KEY_ID = ""
+RAZORPAY_KEY_SECRET = ""
 
 
 class EmailSchema(BaseModel):
